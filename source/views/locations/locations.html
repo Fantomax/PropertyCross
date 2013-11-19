@@ -1,0 +1,15 @@
+<div id="recentSearches">
+    <div id="buttonBack" class="someClass">
+
+    </div>
+    Please select a location below:
+</div>
+<div class="scroll-view" style="position: absolute; top: 50px; left: 0; bottom: 0; right: 0">
+    <ul class="searchPrevRes" data-template="true">
+        {{# _.each(model, function (cityName) { }}
+        <li data-target="{{ cityName.place_name }}">
+            {{ cityName.long_title }}
+        </li>
+        {{# }) }}
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+<div id="recentSearches">
+    RECENT SEARCHES:
+</div>
+<div class="scroll-view" style="position: absolute; top: 30px; left: 0; bottom: 0; right: 0">
+    <ul class="searchHistory" data-template="true">
+    {{# _.each(model, function (cityName) { }}
+    <li class="showThis" data-target="{{ cityName.data }}">
+        <div class="cityName">{{ cityName.city }}</div>
+        <div class="totalResult">{{ cityName.total }}</div>
+    </li>
+    {{# }) }}
+    </ul>
+</div>

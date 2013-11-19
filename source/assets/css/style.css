@@ -1,0 +1,340 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: 16px 'Arial' ;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li{
+    padding: 5px 10px;
+}
+.image {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+#header {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    background-color: #333f4d;
+}
+.favorites,
+.info,
+.back{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f3945;
+}
+.favorites {
+    right: 0;
+    background-image: url("../images/PropertyCross_iOS_icons/go_to_favorites.png");
+}
+.info {
+    left: 0;
+    background-image: url("../images/PropertyCross_iOS_icons/open_info.png");
+}
+.back{
+    left: 0;
+    background-image: url("../images/PropertyCross_iOS_icons/back.png");
+}
+#content {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 100%;
+    background: #e7eaf3;
+}
+#searchHistory {
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    width: 100%;
+}
+.animation{
+    -webkit-transition: all 0.2s ease;
+}
+.searchRorm{
+    position: relative;
+    margin-top: 20px;
+    min-height: 40px;
+}
+#searchWord {
+    padding-left: 30px;
+    position: absolute;
+    border-radius: 7px;
+    left: 45px;
+    right: 38px;
+    border-right: none;
+    height: 31px;
+    box-sizing: border-box;
+    float: left;
+    outline: none;
+    background-size: contain;
+}
+#find,
+#myLocation{
+    border: none;
+    background: #3598db;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+#find:focus,
+#myLocation:focus {
+    outline: none;
+}
+#find{
+    background-image: url("../images/PropertyCross_iOS_icons/search@2x.png");
+    margin-right: 10px;
+    float: right;
+}
+#myLocation{
+    background-image: url("../images/PropertyCross_iOS_icons/my_location@2x.png");
+    margin-left: 10px;
+    float: left;
+}
+#loadMore{
+    text-align: center;
+    line-height: 40px;
+}
+.title {
+    text-align: center;
+    font: 18px/40px sans-serif;
+    color: #ffffff;
+}
+.intro {
+    height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    color: #ffffff;
+    text-align: justify;
+    background-color: #202731;
+    -webkit-transition: all 0.2s ease;
+}
+.intro div{
+    padding: 20px 0;
+}
+.relativebox {
+    position: relative;
+    background-color: #f7f8fd;
+}
+.listOfProperty>li,
+.searchHistory>li,
+.searchPrevRes>li {
+    overflow: hidden;
+    background-color: #f7f8fd;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.desc{
+    padding: 0 0 0 90px;
+}
+#recentSearches{
+    text-align: center;
+    font: 16px 'Arial' sans-serif;
+    font-weight: bold;
+    color: #939aac;
+}
+.searchHistory>li,
+.searchPrevRes>li {
+    line-height: 30px;
+}
+.imageDet{
+    min-height: 210px;
+    margin: 10px auto;
+}
+.descDet,
+.coast{
+    padding: 10px 0 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
+.buttons{
+    text-align: center;
+}
+.price {
+    font-weight: bold;
+}
+.price:before {
+    content: " \00A3";
+}
+.showThis{
+    text-transform: capitalize;
+    position: relative;
+}
+#pullTo{
+    float: left;
+    height: 40px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.down {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#spinnerAll{
+    position: absolute;
+    width: 64px;
+    display: none;
+    top: 180px;
+    margin-left: 50%;
+    left: -32px;
+}
+#spinnerAll, .spinner{
+    -webkit-animation: 'spinner' 400ms linear infinite;
+    animation: 'spinner' 400ms linear infinite;
+}
+@-webkit-keyframes 'spinner' {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes 'spinner' {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.swipe-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.swipe-0, .swipe-1, .swipe-2 {
+    -webkit-transform: translateZ(0);
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+
+    /*disable text select*/
+    -webkit-user-select: none;
+    user-select: none;
+}
+.swipe-0 {
+    top: 0;
+}
+.swipe-1 {
+    top: -100%;
+}
+.swipe-2 {
+    top: -200%;
+}
+.swipe-animation {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+.forDet{
+    background-color: #f7f8fd;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.forStar{
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    background: #e7eaf3;
+    border-radius: 3px;
+    float: right;
+}
+.details-favorites{
+    background: #e7eaf3 url("../images/PropertyCross_iOS_icons/star_favorites@2x.png") no-repeat;
+    background-size: 30px 60px;
+    width: 30px;
+    height: 30px;
+}
+.inFavorites{
+    background-position: 0  -30px;
+}
+.favorMini{
+    background: url("../images/PropertyCross_iOS_icons/star_favorites@2x.png") no-repeat;
+    background-size: 15px 30px;
+    background-position: 0  -15px;
+    width: 15px;
+    height: 15px;
+    float: right;
+    right: 5px;
+    top: 5px
+}
+.error{
+    background-color: #e7d2d7;
+    color: #e74b3c;
+    width: 100%;
+    box-sizing: border-box;
+}
+#header {
+    z-index: 2;
+}
+.shadow {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 7px 15px #484848;
+    box-shadow: 0 7px 15px #484848;
+    z-index: 1;
+}
+.totalResult{
+    position: absolute;
+    width: 50px;
+    padding: 0 5px;
+    right: 5px;
+    top: 9px;
+    background-color: #27ae61;
+    text-align: center;
+    border-bottom: 1px solid #248040;
+    border-radius: 5px;
+    line-height: 22px;
+}
+.toRecentSearch, .toAdvancedSearch{
+    width: 150px;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #3598db;
+}
+.cityName{
+    padding-right: 60px;
+}
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+label {
+    padding: 5px 15px;
+}
+td {
+    height: 50px;
+}

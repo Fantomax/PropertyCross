@@ -1,0 +1,16 @@
+<div class="scroll-view-body">
+    <ul class="listOfProperty" data-template="true">
+        {{# if (model.length === 0){ }}
+        <div>You have not favorite property</div>
+        {{# } }}
+        {{# _.each(model, function (house) {  }}
+        <li data-modelId="{{ house.guid }}">
+            <div class="image" style="background: url('{{ house.thumb_url }}'); background-size: contain"></div>
+            <div class="desc">
+                <div class="price">{{ house.price }}</div>
+                <div>{{ house.title }}</div>
+            </div>
+        </li>
+        {{# }) }}
+    </ul>
+</div>

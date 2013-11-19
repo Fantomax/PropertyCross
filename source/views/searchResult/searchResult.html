@@ -1,0 +1,23 @@
+<div>
+    <ul class="listOfProperty" data-template="true">
+
+        {{# var self = this; _.each(model, function (house) {  }}
+        <li data-modelId="{{ house.guid }}">
+            <div class="image" style="background: url('{{ house.thumb_url }}'); background-size: contain"></div>
+            <div class="desc">
+                {{# if (self.isFavor(house.guid)) { }}
+                <div class="favorMini"></div>
+                {{# } }}
+                <div class="price">{{ house.price }}</div>
+                <div>{{ house.title }}</div>
+            </div>
+        </li>
+        {{# }) }}
+        {{# if (this.model.totalRes > 20 && this.model.totalRes !== this.model.length) { }}
+        <li id="loadMore" data-template="false">
+            <img id="pullTo" src="source/assets/images/up.png" alt=""/>
+            Pull to load more ( {{ this.model.length }} of {{ this.model.totalRes }} )
+        </li>
+        {{# } }}
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+<div class="forDet">
+    <div class="coast"><strong>&pound;{{ data.get('price_formatted').split(' ')[0] }}</strong>
+        <div class="forStar">
+            <div class="details-favorites {{ this.isFavorite(data.id) }}" data-modelid="{{ data.id }}"></div>
+        </div></div>
+    <div>{{ data.get('title') }}</div>
+
+    <div class="imageDet" style="background: url('{{ data.get('img_url') }}'); background-position: center; background-size: contain; background-repeat: no-repeat"></div>
+    <div class="descDet">
+        <div>bathroom: {{ data.get('bathroom_number') }} bedroom: {{ data.get('bedroom_number') }}</div>
+        <div>{{ data.get('summary') }}</div>
+    </div>
+</div>

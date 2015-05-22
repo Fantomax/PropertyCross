@@ -1,0 +1,34 @@
+<div id="filter">
+    <form class="searchRorm" action="#">
+        <input type="text" id="searchWord" placeholder="Input your city"/>
+        <input type="submit" id="find" value=""/>
+    </form>
+    <div class="error"></div>
+    <form action="">
+        <table>
+            <tr>
+                <td>Select listing type</td>
+                <td>
+                    <label><input type="radio" name="listing_type" value="buy" checked>Buy</label>
+                    <label><input type="radio" name="listing_type" value="rent">Rent</label>
+                    <label><input type="radio" name="listing_type" value="share">Share</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Select property type</td>
+                <td>
+                    <label><input type="radio" name="property_type" value="all" checked>All</label>
+                    <label><input type="radio" name="property_type" value="house">House</label>
+                    <label><input type="radio" name="property_type" value="flat">Flat</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Select cost</td>
+                <td>
+                    <input name="min_cost" type="text" placeholder="min"/>
+                    <input name="max_cost" type="text" placeholder="max"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
